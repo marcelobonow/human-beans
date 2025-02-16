@@ -47,6 +47,13 @@ public class SimpleGridLayout : MonoBehaviour
         //meshFilter.mesh.uv = new Vector2[2];
         meshFilter.mesh.normals = new Vector3[vertices.Length];
         meshFilter.mesh.SetIndices(indices.ToArray(), MeshTopology.Lines, 0);
+    }
+
+    public void GenerateUntil(float x, float y, float gapX, float gapY)
+    {
+        var horizontalLines = 2 * x / gapX;
+        var verticalLines = 2 * y / gapY;
 
     }
+
 }
